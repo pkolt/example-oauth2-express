@@ -1,0 +1,24 @@
+
+### With password grant
+POST http://localhost:3000/oauth/token
+# "Basic " + clientId:clientSecret base64'd
+Authorization: Basic aWQ6c2VjcmV0
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&username=user&password=password
+
+### With refresh_token grant
+POST http://localhost:3000/oauth/token
+# "Basic " + clientId:clientSecret base64'd
+Authorization: Basic aWQ6c2VjcmV0
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=refresh_token&refresh_token=1897bf1f008c01f56334a911c83e0821fdaa3a1f
+
+### Get public
+GET http://localhost:3000/public
+
+### Get secret
+GET http://localhost:3000/secret
+Authorization: Bearer c6a8fb164bf945066d006fc68a5ea6eaa3c71f82
+Content-Type: application/json
